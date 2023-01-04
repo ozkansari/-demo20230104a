@@ -19,6 +19,18 @@ public class MetinIslemleriTest {
 	}
 	
 	@Test
+	public void testBosluklariTemizle2() {
+		// GIVEN - On hazirliklar
+		String orjinalMetin = "Merhaba arkadaslar";
+		
+		// WHEN - Asil testi gerceklestir
+		String sonuc = MetinIslemleri.bosluklariTemizle(orjinalMetin);
+		
+		// THEN - Kontroller
+		assertEquals("Merhabaarkadaslar", sonuc);
+	}
+	
+	@Test
 	public void testBosluklariTemizleNull() {
 		// GIVEN - On hazirliklar
 		String orjinalMetin = null;
